@@ -5,6 +5,12 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
+    /omit-if-no-ref/ zip_temp_layer_layer1_right_non_click: zip_temp_layer_layer1_right_non_click {
+        compatible = "zmk,input-processor-temp-layer";
+        #input-processor-cells = <2>;
+        excluded-positions = <0 1 2 3 4 5 6 14 15 16 17 18 19 20 28 29 30 31 32 33 34 37 38 42 43 44 45 46 47 48 56 57 58 59 60 61 62>;
+    };
+
     combos {
         compatible = "zmk,combos";
 
@@ -12,6 +18,21 @@
             bindings = <&bt BT_CLR>;
             key-positions = <28 29>;
             layers = <2>;
+        };
+
+        mouse_middle_click {
+            bindings = <&mkp MCLK>;
+            key-positions = <37 38>;
+            layers = <1>;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        layer_4_when_layer_2_and_3 {
+            if-layers = <2 3>;
+            then-layer = <4>;
         };
     };
 
@@ -55,6 +76,16 @@
 &trans  &kp F6   &kp F7   &kp F8        &kp F9        &kp F10     &trans  &trans  &kp LEFT          &kp DOWN   &kp UP_ARROW   &kp RIGHT  &kp TAB     &trans
 &trans  &kp F11  &kp F12  &out OUT_USB  &out OUT_BLE  &bt BT_NXT  &trans  &trans  &kp SINGLE_QUOTE  &kp DQT    &kp GRAVE      &kp TILDE  &kp PIPE    &trans
 &trans  &trans   &trans   &trans        &kp DELETE    &kp TAB     &trans  &trans  &trans            &trans     &trans         &trans     &trans      &trans
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
