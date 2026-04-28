@@ -7,6 +7,6 @@
 
     scroll_layer_2_to_4 {
         layers = <2 3 4>;
-        input-processors = <&zip_xy_to_scroll_mapper>;
+        input-processors = <&zip_xy_to_scroll_mapper &zip_scroll_scaler 1 2>;
     };
 };
