@@ -5,8 +5,8 @@
 &pointing_listener {
     input-processors = <&zip_temp_layer_exclusive_rh_clicks 1 0>, <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
 
-    layer_4_scroll {
-        layers = <4>;
+    layer_2_3_scroll {
+        layers = <2 3>;
         input-processors = <&zip_xy_to_scroll_mapper>, <&zip_scroll_scaler 1 3>;
     };
 };
