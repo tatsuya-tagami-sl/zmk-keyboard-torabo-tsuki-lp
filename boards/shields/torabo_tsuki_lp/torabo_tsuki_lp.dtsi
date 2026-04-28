@@ -3,6 +3,12 @@
 #include "torabo_tsuki_lp_layouts.dtsi"
 
 / {
+    /omit-if-no-ref/ zip_temp_layer_exclusive_rh_clicks: zip_temp_layer_exclusive_rh_clicks {
+        compatible = "zmk,input-processor-temp-layer";
+        #input-processor-cells = <2>;
+        excluded-positions = <19 20>;
+    };
+
     chosen {
         zmk,physical-layout = &physical_layout_l;
         zmk,kscan = &kscan0;
