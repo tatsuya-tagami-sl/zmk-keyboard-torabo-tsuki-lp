@@ -24,6 +24,8 @@
             bindings = <&mkp MCLK>;
             key-positions = <37 38>;
             layers = <1>;
+            timeout-ms = <200>;
+            require-prior-idle-ms = <0>;
         };
     };
 
