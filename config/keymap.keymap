@@ -14,14 +14,14 @@
             layers = <2>;
         };
 
-        layer_0_19_20_to_right_click {
-            bindings = <&mkp RCLK>;
+        layer_0_19_20_to_left_click {
+            bindings = <&mkp LCLK>;
             key-positions = <19 20>;
             layers = <0>;
         };
 
-        layer_0_20_21_to_left_click {
-            bindings = <&mkp LCLK>;
+        layer_0_20_21_to_right_click {
+            bindings = <&mkp RCLK>;
             key-positions = <20 21>;
             layers = <0>;
         };
