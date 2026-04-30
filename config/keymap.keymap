@@ -14,10 +14,22 @@
             layers = <2>;
         };
 
-        layer_1_right_clicks_to_middle_click_m {
-            bindings = <&mkp MCLK>;
+        layer_0_19_20_to_right_click {
+            bindings = <&mkp RCLK>;
             key-positions = <19 20>;
-            layers = <1>;
+            layers = <0>;
+        };
+
+        layer_0_20_21_to_left_click {
+            bindings = <&mkp LCLK>;
+            key-positions = <20 21>;
+            layers = <0>;
+        };
+
+        layer_0_19_21_to_middle_click {
+            bindings = <&mkp MCLK>;
+            key-positions = <19 21>;
+            layers = <0>;
         };
     };
 
